@@ -71,7 +71,7 @@ pipeline {
                   secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
                   ]]) {
                   sh """
-                  cd Kubernetes/comingsoon/k8s
+                  cd comingsoon/k8s
                   kubectl -n comingsoon apply -f deployment.yaml
                   kubectl -n comingsoon apply -f services.yaml
                   """
