@@ -1,7 +1,7 @@
 ---
 - name: "Build container with ansible"
   hosts: localhost
-  become: true
+
   tasks:
     - name: stop running container
       command: docker stop saeedamadan74/k8s-project-1
