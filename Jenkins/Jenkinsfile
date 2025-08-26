@@ -14,7 +14,7 @@ pipeline {
             steps {
               sh """
               cd comingsoon/
-              ansible-playbook playbook.yml --ask-become-pass
+              sudo ansible-playbook playbook.yml 
               """
             }
         }
