@@ -14,7 +14,7 @@ pipeline {
             steps {
               sh """
               cd comingsoon/
-              sudo ansible-playbook playbook.yml 
+              ansible-playbook playbook.yml 
               """
             }
         }
