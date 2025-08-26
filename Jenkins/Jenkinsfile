@@ -50,7 +50,7 @@ pipeline {
                 }
             }
         }
-		*/
+		
         stage('Create Namespace') {
             steps {
               // You will need to install CloudBees AWS Credentials Plugin in Jenkins and add AWS Credentials first 
@@ -64,6 +64,7 @@ pipeline {
                 }
             }
         }
+		*/
         stage('Deploy') {
             steps {
               // You will need to install CloudBees AWS Credentials Plugin in Jenkins and add AWS Credentials first 
