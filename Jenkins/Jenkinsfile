@@ -13,7 +13,7 @@ pipeline {
         stage('Build & push Dockerfile') {
             steps {
               sh """
-              cd Kubernetes/comingsoon/
+              cd comingsoon/
               ansible-playbook playbook.yml
               """
             }
