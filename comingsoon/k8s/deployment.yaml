@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
       - name: comingsoon-page
-        image: saeedamadan74/k8s-project-1:latest
+        image: saeedamadan74/k8s-project-1
         ports:
         - containerPort: 80
