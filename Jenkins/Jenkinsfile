@@ -37,7 +37,7 @@ pipeline {
 	  
         stage('Create Cluster') {
             steps {
-              // You will need to install CloudBees AWS Credentials Plugin in Jenkins and add AWS Credentials first 
+              // You will need to install CloudBees AWS Credentials Plugin in Jenkins and add AWS Credentials first  eksctl create cluster --name comingsoon-cluster --region us-east-1 --nodes-min=2
                 withCredentials([[
                   $class: 'AmazonWebServicesCredentialsBinding',
                   credentialsId: "aws-credentials",
@@ -45,7 +45,12 @@ pipeline {
                   secretKeyVariable: 'AWS_SECRET_ACCESS_KEY'
                   ]]) {
                   sh """
-                  eksctl create cluster --name comingsoon-cluster --region us-east-1 --nodes-min=2
+                 eksctl create cluster \
+                      --name comingsoon-cluster \
+                      --region us-east-1 \
+                      --nodes 2 \
+                      --node-type t3.medium \
+                      --managed
                   aws eks update-kubeconfig --name comingsoon-cluster
                   """
                 }
