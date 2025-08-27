@@ -22,7 +22,7 @@ pipeline {
                 """
             }
         }
-
+/*
         stage('Create Cluster') {
             steps {
                 withCredentials([[
@@ -46,7 +46,7 @@ pipeline {
                 }
             }
         }
-
+*/
         stage('Create Namespace') {
             steps {
                 withCredentials([[
